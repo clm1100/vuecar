@@ -10,7 +10,6 @@
         </div>
     </div>
     <div class="c-container">
-        <h1>数量{{list.length}} {{list}}</h1>
         <div class="w">
             <div class="cart-filter-bar">
                 <em>全部商品</em>

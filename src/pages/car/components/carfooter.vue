@@ -15,11 +15,11 @@
     <div class="toolbar-right">
       <div class="amount-sum">
         已经选
-        <em>1</em>件商品
+        <em>{{allcount}}</em>件商品
       </div>
       <div class="price-sum">
         总价：
-        <em>￥12.60</em>
+        <em>￥{{allprice}}</em>
       </div>
       <div class="btn-area">去结算</div>
     </div>
@@ -37,7 +37,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(["isall"])
+    ...mapGetters(["isall","allprice","allcount"])
   }
 };
 </script>

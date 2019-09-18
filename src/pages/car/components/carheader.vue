@@ -1,7 +1,6 @@
 <template>
   <!-- 头部全选模块 -->
     <div class="cart-thead">
-        <h1>999999 {{isall}}</h1>
         <div class="t-checkbox">
             <input
             :checked="isall"

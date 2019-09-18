@@ -62,6 +62,22 @@ let car = {
             return state.carlist.every(e=>{
                 return e.checked===true;
             })
+        },
+        allprice:(state)=>{
+            let arr = state.carlist.filter(e=>e.checked);
+            let all = 0;
+            arr.forEach(e=>{
+                all += (e.count * e.price * 100)
+            })
+            return all/100;
+        },
+        allcount:(state)=>{
+            let arr = state.carlist.filter(e => e.checked);
+            let count = 0;
+            arr.forEach(e => {
+                count += e.count
+            })
+            return count;
         }
     }
 }

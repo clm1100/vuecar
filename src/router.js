@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./pages/Home.vue";
-import Car from "./pages/car.vue";
+import Car from "./pages/car/car.vue";
 const About = () => import(/* webpackChunkName: "about" */ "./pages/About.vue")
 
 Vue.use(Router);

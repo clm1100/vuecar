@@ -1,7 +1,7 @@
 
 <template>
   <div>
-      
+      <h1>{{$store.state.car.carlist}}</h1>
      <div class="car-header">
         <div class="w">
             <div class="car-logo">
@@ -23,7 +23,6 @@
                 <Carfooter/>
             </div>
         </div>          
-
     </div>
   </div>
 </template>
@@ -34,7 +33,6 @@ import Carheader from './components/carheader'
 import Carfooter from './components/carfooter'
 import Carbody from './components/carbody'
 export default {
-    
     components:{
         Carheader,
         Carbody,

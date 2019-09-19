@@ -1,7 +1,6 @@
 
 import local from "@/utils/local.js";
 
-// local.init();
 let car = {
     state: {
         carlist: []

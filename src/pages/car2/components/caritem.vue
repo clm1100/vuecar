@@ -1,5 +1,5 @@
 <template>
-    <div class="cart-item">
+    <div :class="checked?'cart-item check-cart-item':'cart-item'">
       <div class="p-checkbox">
         <input 
         type="checkbox" 
@@ -17,8 +17,14 @@
       <div class="p-num">
         <div class="quantity-form">
           <a href="javascript:;" class="decrement"  @click="addcount('-',id)">-</a>
-          <input type="text" class="itxt" v-bind:value="newcount" />
+          <input type="text" 
+          ref="ipt"
+          class="itxt" 
+          v-bind:value="count" 
+
+          />
           <a href="javascript:;" class="increment" @click="addcount('+',id)">+</a>
+           <a href="javascript:;" class="increment" @click="addcount1('+',id)">测</a>
         </div>
       </div>
       <div class="p-sum">￥{{(price*100*count/100).toFixed(2)}}</div>
@@ -48,6 +54,22 @@ export default {
       }
     },
     methods:{
+      addcount1(flag,id){
+        let num =this.$refs.ipt.value
+        console.log(flag,id,num)
+
+        if(flag==="+"){
+          num++;
+        }else{
+          num--;
+          if(num<1){
+            num = 1;
+            return alert("不能在减少了")
+          }
+        }
+        console.log("3333")
+        this.$store.dispatch("backupdate",{id,count:num})
+      },
       addcount(flag,id){
         if(flag==="+"){
           this.newcount++;

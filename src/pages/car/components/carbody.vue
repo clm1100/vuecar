@@ -10,17 +10,14 @@
 <script>
 import caritem from './caritem'
 export default {
-  props:{
-    list:Array
+  props: {
+    list: Array
   },
-  components:{
+  components: {
     caritem
   },
-  created(){
-    console.log(this.list)
+  created() {
+    console.log(this.list);
   }
 };
 </script>
-
-<style>
-</style>

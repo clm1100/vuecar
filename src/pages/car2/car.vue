@@ -18,7 +18,7 @@
             <div class="cart-warp">
                 <Carheader/>
                 <!-- 商品详细模块 -->
-                <Carbody :list="list"/>
+                <Carbody />
 
                 <Carfooter/>
             </div>
@@ -29,7 +29,6 @@
 </template>
 
 <script>
-import { mapState,mapActions } from "vuex";
 import '@/source/css/car.css'
 import Carheader from './components/carheader'
 import Carfooter from './components/carfooter'
@@ -40,21 +39,6 @@ export default {
         Carheader,
         Carbody,
         Carfooter
-    },
-    computed:{
-        ...mapState({
-            list:state=>state.car.carlist
-        })
-    },
-    created(){
-        this.getcarlist();
-    },
-    mounted(){
-    },
-    methods:{
-        ...mapActions([
-            'getcarlist'
-        ])
     }
 }
 </script>

@@ -6,7 +6,7 @@ import store from "./store/index";
 Vue.config.productionTip = false;
 
 import "@/source/css/base.css";
-import "@/source/css/common.css"
+import "@/source/css/common.css";
 new Vue({
   router,
   store,
